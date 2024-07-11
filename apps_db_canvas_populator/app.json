@@ -1,0 +1,15 @@
+{
+  "name": "apps-db-data-populator",
+  "type": "web",
+  "version": "2024.07.11.09.56.24",
+  "description": "Enrich your PitchDecks with data from your database",
+  "display_name": "Apps DB data populator",
+  "icon": "fas fa-cloud",
+  "hooks": {
+    "canvas": {
+      "on_canvas_update": {
+        "entry": "index.html"
+      }
+    }
+  }
+}

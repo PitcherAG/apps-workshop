@@ -1,0 +1,30 @@
+name: Populator - Build and deploy
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'apps_db_canvas_populator/**'
+  workflow_dispatch:
+
+jobs:
+  publish-test:
+    defaults:
+      run:
+        working-directory: ./apps_db_canvas_populator
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CI_GH_TOKEN }}
+          persist-credentials: false
+
+      - name: 📦 Deploy
+        run: ../deploy.sh
+        env:
+          PITCHER_API_KEY: ${{ secrets.PITCHER_API_KEY }}
+          PITCHER_INSTANCE_ID: ${{ secrets.PITCHER_INSTANCE_ID }}
+          PITCHER_DOMAIN: ${{ secrets.PITCHER_DOMAIN }}

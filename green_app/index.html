@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Generator</title>
+
+    <script src="https://unpkg.com/@pitcher/js-api@beta"></script>
+    <script src="index.js"></script>
+
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="greeting">Hello, World!</h1>
+      <div>
+        <p id="user-name-display"></p>
+        <p id="client-name-display"></p>
+      </div>
+      <button id="generate-button">Generate Document</button>
+      <div id="loading-indicator" class="hidden">
+        <p>Loading...</p>
+      </div>
+      <div id="response-container"></div>
+    </div>
+  </body>
+</html>

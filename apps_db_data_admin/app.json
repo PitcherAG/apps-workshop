@@ -1,0 +1,13 @@
+{
+  "name": "apps-db-data-admin",
+  "type": "web",
+  "version": "2024.07.11.09.56.22",
+  "description": "Apps DB Data Admin",
+  "module": {
+    "admin_instance": {
+      "enabled": true
+    }
+  },
+  "icon": "far fa-edit",
+  "display_name": "Data Admin"
+}

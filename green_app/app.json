@@ -1,0 +1,24 @@
+{
+  "name": "external-pdf-importer",
+  "type": "web",
+  "version": "2024.07.11.12.52.53",
+  "display_name": "Green App",
+  "description": "External PDF Importer",
+  "displayName": "",
+  "icon": "fas fa-music",
+  "module": {
+    "dsr": {
+      "enabled": true
+    },
+    "canvas": {
+      "enabled": true,
+      "auto_install": false,
+      "defaults": {
+        "dimensions": {
+          "width": "100%",
+          "height": "600px"
+        }
+      }
+    }
+  }
+}

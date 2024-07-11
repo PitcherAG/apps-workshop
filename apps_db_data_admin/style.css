@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.jsoneditor {
+  border: 1px solid var(--p-primary5);
+}
+.btn-primary {
+  background-color: var(--p-primary);
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--p-base);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  margin-top: 1rem;
+}

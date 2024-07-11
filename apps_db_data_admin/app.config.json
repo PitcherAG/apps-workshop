@@ -1,0 +1,17 @@
+{
+  "sections": [
+    {
+      "label": "Data Manager",
+      "fields": [
+        {
+          "type": "text",
+          "name": "jsondata",
+          "label": "Last Read JSON representation",
+          "help_text": "Please do not alter system will update.",
+          "is_required": false,
+          "is_filterable": false
+        }
+      ]
+    }
+  ]
+}
