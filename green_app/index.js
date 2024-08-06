@@ -61,7 +61,7 @@ uiApi.on_app_set_data((data) => {
   api.getEnv().then(function (result) {
     window.env = result
     userName = window.env.pitcher.user.name
-    clientName = currentCanvas.account.name
+    clientName = currentCanvas.account ? currentCanvas.account.name : null
 
     if (userName && clientName) {
       document.getElementById(
