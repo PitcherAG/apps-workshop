@@ -18,16 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
     generateButton.disabled = true
     loadingIndicator.classList.remove('hidden')
 
-    fetch(localStorage.greenAppLocalBackend
-      ? 'http://localhost:3123/'
-      : 'https://analytics.pitcher.com/test/green_helloworld/generate_pdf.php', {
+    fetch('http://localhost:3123/', {
       method: 'POST',
       body: new URLSearchParams({
         userName,
         clientName,
         token: window.env.pitcher.access_token,
         instanceId: window.env.pitcher.instance.id,
-        folderId: '01J1N752B5W1JTS87721R6VSKW',
+        folderId: '01J4VQDME5ZB0PWC7VZ1VVSMTV',
       }),
     })
       .then((response) => response.text())

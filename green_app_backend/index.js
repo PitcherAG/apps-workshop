@@ -150,7 +150,7 @@ app.post('/', async (req, res) => {
       res.status(400).send('Invalid input.')
     }
   } catch (error) {
-    console.error('Error processing request:', error)
+    console.error('Error processing request:', error.response ? error.response.data : error.message)
     res.status(500).send('Internal server error.')
   }
 })
