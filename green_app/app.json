@@ -1,9 +1,9 @@
 {
-  "name": "external-pdf-importer",
+  "name": "green-app-debug",
   "type": "web",
-  "version": "2024.07.11.12.52.53",
-  "display_name": "Green App",
-  "description": "External PDF Importer",
+  "version": "2024.08.09.1723212525877",
+  "display_name": "Green App Debug",
+  "description": "Green App Debug",
   "displayName": "",
   "icon": "fas fa-music",
   "module": {
