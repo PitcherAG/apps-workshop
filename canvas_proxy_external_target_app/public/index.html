@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pitcher API Test</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Pitcher API Test</h1>
+      <div class="button-container">
+        <button id="testApi">Test Pitcher API</button>
+        <button id="testUiApi">Test Pitcher UI API</button>
+      </div>
+      <div>
+        <pre id="result-container"><code id="result">Click one of the buttons above to test the Pitcher API proxy.</code></pre>
+      </div>
+    </div>
+
+    <script type="module">
+      import { pitcherApi, pitcherUiApi } from "./pitcher-api-wrapper.js";
+
+      const resultElement = document.getElementById("result");
+
+      document.getElementById("testApi").addEventListener("click", async () => {
+        try {
+          const result = await pitcherApi.getEnv();
+          resultElement.textContent = `API Result:\n\n${JSON.stringify(
+            result,
+            null,
+            2
+          )}`;
+        } catch (error) {
+          resultElement.textContent = `API Error:\n\n${error.message}`;
+        }
+      });
+
+      document
+        .getElementById("testUiApi")
+        .addEventListener("click", async () => {
+          try {
+            const result = await pitcherUiApi.toast({
+              type: "info",
+              duration: 1000,
+              message: "I'm free!!!!",
+            });
+            resultElement.textContent = `UI API Result:\n\n${JSON.stringify(
+              result,
+              null,
+              2
+            )}`;
+          } catch (error) {
+            resultElement.textContent = `UI API Error:\n\n${error.message}`;
+          }
+        });
+    </script>
+  </body>
+</html>

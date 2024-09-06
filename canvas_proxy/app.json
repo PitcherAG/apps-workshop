@@ -1,0 +1,23 @@
+{
+  "name": "canvasproxy",
+  "type": "web",
+  "version": "2024.09.05.13.34.45",
+  "description": "Canvas Proxy",
+  "display_name": "Canvas Proxy",
+  "icon": "fas fa-arrow-down-up-across-line",
+  "module": {
+    "dsr": {
+      "enabled": true
+    },
+    "canvas": {
+      "enabled": true,
+      "auto_install": false,
+      "defaults": {
+        "dimensions": {
+          "width": "100%",
+          "height": "1000px"
+        }
+      }
+    }
+  }
+}
